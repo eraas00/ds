@@ -1,0 +1,88 @@
+﻿
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'MedievalSharp', cursive;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0a192f, #1c3b5a); /* Тёмно-синий градиент */
+}
+
+/* Карточка */
+.card {
+    width: 300px;
+    height: 420px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transform: scale(0.9);
+    opacity: 0;
+    animation: fadeIn 0.6s ease-in-out forwards;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Анимация при наведении */
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Фото */
+.image-container img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+}
+
+/* Текст */
+.text-container {
+    padding: 15px;
+}
+
+h2 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+/* Кнопка */
+.subscribe {
+    background: #ff4b5c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Анимация кнопки */
+.subscribe:hover {
+    background: #d63c4b;
+    transform: scale(1.1);
+}}
